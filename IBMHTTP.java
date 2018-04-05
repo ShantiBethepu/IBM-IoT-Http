@@ -9,7 +9,7 @@ public class IBMHTTP implements GreenApp
     public void declareConfiguration(Builder builder)
     {
         System.out.println("----------------declare config-------------");
-        builder.useNetClient();
+        builder.useNetClient(); //secure connection (HTTPS). use InsecureNetClient for HTTP
         System.out.println("----------------declare config-------------");
     }
     @Override
