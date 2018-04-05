@@ -6,11 +6,11 @@ import com.ociweb.pronghorn.pipe.ChannelWriter;
 public class HttpClient implements StartupListener, HTTPResponseListener,HeaderWritable
 {
     GreenCommandChannel cmd;
-    String host="gysmrx.messaging.internetofthings.ibmcloud.com";
-    int port=443;//08 8883
-    String topic="/api/v0002/device/types/Httpdevices/devices/httpdevice/events/status";
+    String host="orgid.messaging.internetofthings.ibmcloud.com"; //orgid is the organization ID for IBM IoT
+    int port=443;//or 8883
+    String topic="/api/v0002/device/types/typeid/devices/deviceid/events/eventid";
     HTTPSession httpSession=new HTTPSession(host,port);
-    Writable message = writer -> writer.append("{\"d\":{\"status\":\"Hello Watson IoT\", \"sender\":\"This is from GreenLightning :) \"}}");
+    Writable message = writer -> writer.append("{\"d\":{\"status\":\"Hello Watson IoT\", \"sender\":\"This is from GreenLightning :) \"}}"); //your message
      public HttpClient(GreenRuntime runtime)
     {
         cmd=runtime.newCommandChannel(NET_REQUESTER|DYNAMIC_MESSAGING);
