@@ -1,2 +1,2 @@
 # IBM-IoT-Http
-This project demos the connection of a device application to IBM IoT
+This project shows how to communicate to IBM IoT over HTTPS using GreenLightning (https://github.com/oci-pronghorn/GreenLighter)
